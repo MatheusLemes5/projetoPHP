@@ -29,7 +29,7 @@
             session_start();
             $query = $conexao->prepare("update usuario set email = ?, password = ?, nome= ? where codusuario = ?");
             $resultado = $query->execute($array);   
-            $_SESSION['nome']=$array[2];         
+            $_SESSION['nome']=$array[0];         
             return $resultado;
         }catch(PDOException $e) {
             echo 'Error: ' . $e->getMessage();

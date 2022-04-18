@@ -41,7 +41,7 @@
             $codusuario = $_POST['editar'];
             $array = array($codusuario);
             $usuario=buscarUsuario($conexao, $array);
-            require_once('../editar_usuario.php');
+            require_once('editar_usuario.php');
     }   
 #ALTERAR PESSOA
     if(isset($_POST['alterar'])){
@@ -50,9 +50,9 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
             $nome = $_POST['nome']; 
-            $array = array($codusuario, $email, $password, $nome);
+            $array = array($email, $password, $nome, $codusuario);
             alterarUsuario($conexao, $array);
-            header('location:../index.php');
+            header('location:listagem_usuarios.php');
     }
 #DELETAR PESSOA
     if(isset($_POST['deletar'])){

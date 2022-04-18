@@ -21,22 +21,24 @@
     
             $codveiculo = $_POST['editar'];
             $array = array($codveiculo);
-            $usuario=buscarVeiculo($conexao, $array);
-            require_once('../alterarveiculo.php');
+            $veiculo=buscarVeiculo($conexao, $array);
+            require_once('editar_veiculo.php');
     }    
 #ALTERAR PESSOA
     if(isset($_POST['alterar'])){
-    
-            $codveiculo = $_POST['codveiculo'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $nome = $_POST['nome']; 
-            $array = array($email, $password, $nome, $codpessoa);
-            alterarUsuario($conexao, $array);
-    
-            header('location:../../index.php');
+        $codveiculo = $_POST['codveiculo'];
+        $ano = $_POST['ano'];
+        $marca = $_POST['marca'];
+        $modelo = $_POST['modelo'];
+        $quilometragem = $_POST['quilometragem'];
+        $adicionais = $_POST['adicionais'];
+        $valor = $_POST['valor'];
+        $contato = $_POST['contato'];
+        $array = array($ano, $marca, $modelo, $quilometragem, $adicionais, $valor, $contato, $codveiculo);
+        alterarVeiculo($conexao, $array);
+        header('location:../indexAdmin.php');
     }
-#DELETAR PESSOA
+#DELETAR VEICULO
     if(isset($_POST['deletar'])){
         $codveiculo = $_POST['deletar'];
         $array=array($codveiculo);

@@ -14,7 +14,7 @@
 
     function alterarVeiculo($conexao, $array){
         try {
-            $query = $conexao->prepare("update veiculo set imagem = ?, ano = ?, marca = ?, modelo = ?, quilomatragem = ?, adicionais = ? where codveiculo = ?");
+            $query = $conexao->prepare("update veiculo set ano = ?, marca = ?, modelo = ?, quilometragem = ?, adicionais = ?, valor = ?, contato = ? where codveiculo = ?");
             $resultado = $query->execute($array);             
             return $resultado;
         }catch(PDOException $e) {

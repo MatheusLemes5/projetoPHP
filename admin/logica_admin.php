@@ -1,5 +1,5 @@
 <?php
-    require_once('conecta.php');
+    require_once('../conecta.php');
     require_once('funcoes_admin.php');
 #CADASTRO PESSOA
     if(isset($_POST['cadastrar'])){
@@ -21,7 +21,7 @@
             $_SESSION['logado'] = true;
             $_SESSION['codadmin'] = $admin['codadmin'];
             $_SESSION['nome'] = $admin['nome'];
-            header('location:../index.php');
+            header('location:../indexAdmin.php');
         }
         else{
             header('location:login.php');
@@ -55,14 +55,14 @@
     
             header('location:../../index.php');
     }
-#DELETAR PESSOA
-    if(isset($_POST['deletar'])){
-        $codadmin = $_POST['deletar'];
-        $array=array($codadmin);
-        deletarAdmin($conexao, $array);
+#DELETAR VEICULOS
+if(isset($_POST['deletar'])){
+    $codveiculo = $_POST['deletar'];
+    $array=array($codveiculo);
+    deletarVeiculo($conexao, $array);
 
-        header('Location:../../index.php');
-    }
+    header('Location:../index.php');
+}
 
 #PESQUISAR PESSOA
     if(isset($_POST['pesquisar'])){
