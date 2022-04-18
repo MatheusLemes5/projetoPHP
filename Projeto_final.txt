@@ -1,0 +1,41 @@
+O projeto será uma loja de veiculos, onde o usuário terá que ter 
+o seu login e senha validados. Após a validação o usuário terá um conjunto 
+de veiculos cadastrados na plataforma. Também terá um perfil de admin onde 
+ele será responsavel por adicionar os veiculos (fotos e descrições). O usuário padrão terá disponivel 
+uma aba de pesquisa e um carrinho, onde será guardado todos os veiculos que ele 
+adicionar ao carrinho. 
+
+
+Tabelas 
+
+Usuário 
+
+- ID do usuario -> chave primaria 
+- email
+- password 
+- nome 
+
+Admin
+
+- ID do admin -> chave primaria 
+- email
+- password
+- nome 
+
+Veiculo
+
+- ID do veiculo ->chave primaria 
+- imagem
+- ano 
+- marca
+- modelo
+- quilomentragem 
+- adicionais 
+- ID do admin -> chave estrangeira
+
+
+Carrinho 
+
+- codigo da operação -> chave primaria
+- ID do usuario -> chave estrangeira 
+- ID do veiculo -> chave estrangeira 
