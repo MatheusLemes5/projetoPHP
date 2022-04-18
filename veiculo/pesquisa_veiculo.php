@@ -18,7 +18,10 @@
       <p><button type="submit" id='pesquisarMaiorAno' name='pesquisarMaiorAno' value="PesquisarMaiorAno"> Pesquisar veilculos acima do ano</button>  </p><br>  
 
       <p><label for="quilometragem">Quilometragem: </label><input type="text" name="quilometragem" id="quilometragem"></p>
-      <p><button type="submit" id='pesquisaQuilometragem' name='pesquisaQuilometragem' value="PesquisaQuilometragem"> Pesquisar veilculos acima da quilometragem</button>  </p> 
+      <p><button type="submit" id='pesquisaQuilometragem' name='pesquisaQuilometragem' value="PesquisaQuilometragem"> Pesquisar veilculos acima da quilometragem</button>  </p><br>
+      
+      <p><label for="valor">Valor: </label><input type="text" name="valor" id="valor"></p>
+      <p><button type="submit" id='pesquisaValor' name='pesquisaValor' value="PesquisaValor"> Pesquisar veilculos abaixo do valor</button>  </p><br>  
     </form>
     </section>
 </main>

@@ -21,6 +21,8 @@ marca VARCHAR(20),
 modelo VARCHAR(20),
 quilometragem int,
 adicionais VARCHAR(20),
+valor int,
+contato VARCHAR(20)
 FOREIGN KEY (codadmin) REFERENCES admin(codadmin)
 );
 

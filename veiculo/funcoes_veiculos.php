@@ -2,7 +2,7 @@
  
     function inserirVeiculos($conexao,$array){
        try {
-            $query = $conexao->prepare("insert into veiculo (ano, marca, modelo, quilometragem, adicionais) values (?, ?, ?, ?, ?)");
+            $query = $conexao->prepare("insert into veiculo (ano, marca, modelo, quilometragem, adicionais, valor, contato) values (?, ?, ?, ?, ?, ?, ?)");
             $resultado = $query->execute($array);
             return $resultado;
         }catch(PDOException $e) {
@@ -165,6 +165,28 @@
     function pesquisarVeiculoMenorQuilometragem($conexao,$array){
         try {
         $query = $conexao->prepare("select * from veiculo where quilometragem < ?");
+        if($query->execute($array)){
+            $veiculo = $query->fetchAll(); 
+          if ($veiculo)
+            {  
+                return $veiculo;
+            }
+        else
+            {
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+         }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+      }  
+    }
+
+    function pesquisarVeiculoMenorValor($conexao,$array){
+        try {
+        $query = $conexao->prepare("select * from veiculo where valor < ?");
         if($query->execute($array)){
             $veiculo = $query->fetchAll(); 
           if ($veiculo)

@@ -81,7 +81,7 @@
         $query = $conexao->prepare("select * from admin where email=? and password=?");
         if($query->execute($array)){
             $admin = $query->fetch(); //coloca os dados num array $admin
-          if ($pessoa)
+          if ($admin)
             {  
                 return $admin;
             }

@@ -13,6 +13,8 @@
       <p><label for="modelo">Modelo: </label><input type="text" name="modelo" id="modelo"></p>
       <p><label for="quilometragem">Quilometragem: <input type="text" name="quilometragem" id="quilometragem">
       <p><label for="adicionais">Adicionais: <input type="text" name="adicionais" id="adicionais">
+      <p><label for="valor">Valor: <input type="text" name="valor" id="valor">
+      <p><label for="contato">Contato: <input type="text" name="contato" id="contato">
       <p><button type="submit" id='cadastrar' name='cadastrar' value="Cadastrar"> Cadastrar </button>  </p>      
     </form>
     </section>

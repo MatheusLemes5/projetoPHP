@@ -31,7 +31,9 @@ include_once('conecta.php');
                     <p>Ano: <?php echo $veiculo['ano']; ?></p>
                     <p>Marca: <?php echo $veiculo['marca']; ?></p>
                     <p>Quilometragem: <?php echo $veiculo['quilometragem']; ?></p> 
-                    <p>Adicionais: <?php echo $veiculo['adicionais']; ?></p>                                           
+                    <p>Adicionais: <?php echo $veiculo['adicionais']; ?></p>    
+                    <p>Valor: <?php echo $veiculo['valor']; ?></p>  
+                    <p>Contato: <?php echo $veiculo['contato']; ?></p>                                         
                     <form action="veiculo/logica_veiculos.php" method="post">
                         <button type="submit" name="editar" value="<?php echo $veiculo['codveiculo']; ?>"> Editar </button>
                         <button type="submit" name="deletar" value="<?php echo $veiculo['codveiculo']; ?>" onclick = "return confirma_excluir()"> Deletar </button> 

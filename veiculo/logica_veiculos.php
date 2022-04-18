@@ -9,7 +9,9 @@
         $modelo = $_POST['modelo'];
         $quilometragem = $_POST['quilometragem'];
         $adicionais = $_POST['adicionais'];
-        $array = array($ano, $marca, $modelo, $quilometragem, $adicionais);
+        $valor = $_POST['valor'];
+        $contato = $_POST['contato'];
+        $array = array($ano, $marca, $modelo, $quilometragem, $adicionais, $valor, $contato);
         inserirVeiculos($conexao, $array);
         header('location:../index.php');
     }
@@ -79,6 +81,14 @@ if(isset($_POST['pesquisaQuilometragem'])){
     
 }
 
+#PESQUISAR VEICULO POR VALOR
+if(isset($_POST['pesquisaValor'])){
+    $valor = $_POST['valor'];
+    $array=array($valor);
+    $veiculos=pesquisarVeiculoMenorValor($conexao, $array);
+    require_once('mostrar_veiculo.php');
+    
+}
 
 #ALTERAR PERFIL
     if(isset($_POST['alterarPerfil'])){

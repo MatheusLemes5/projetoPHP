@@ -16,15 +16,15 @@
         $password = $_POST['password'];
         $array = array($email, $password);
         $admin = acessarAdmin($conexao,$array);
-        if($pessoa){
+        if($admin){
             session_start();
             $_SESSION['logado'] = true;
             $_SESSION['codadmin'] = $admin['codadmin'];
-            $_SESSION['nome'] = $usuario['nome'];
-            header('location:../../index.php');
+            $_SESSION['nome'] = $admin['nome'];
+            header('location:../index.php');
         }
         else{
-            header('location:../../login.php');
+            header('location:login.php');
         }
     }
 
